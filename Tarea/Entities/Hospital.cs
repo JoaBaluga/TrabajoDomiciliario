@@ -9,11 +9,15 @@ namespace Entities
 {
     public class Hospital
     {
+        [Key]
         [Required]
         public Guid Id { get; set; }
         [Required]
         public string Name { get; set; }
         public string Address { get; set; }
+
+        public virtual ICollection<Doctor> Doctors { get; set; }
+
 
     }
 }
